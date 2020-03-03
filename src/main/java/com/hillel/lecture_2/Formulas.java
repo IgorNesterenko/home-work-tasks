@@ -12,7 +12,8 @@ public class Formulas {
     @Step
     public double calculate9Formula(double x) {
         double result = 0.0;
-       result = pow(exp(1.1), -x) + abs(cos(sqrt(PI*x))) - 3/8;
+        result = pow(exp(1.1), -x) + abs(cos(sqrt(PI*x))) - 0.375;
+        System.out.println();
 //        TODO implement formula 9
         return result;
     }
