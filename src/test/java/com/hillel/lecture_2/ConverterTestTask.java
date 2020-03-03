@@ -16,13 +16,13 @@ public class ConverterTestTask {
 
     @Test
     public void celsiusToFahrenheitTest() {
-        double expectedResult = 50.0;
+        double expectedResult = 50.0d;
         assertEquals(temperatureConverter.celsiusToFahrenheit(10), expectedResult);
     }
 
     @Test
     public void fahrenheitToCelsiusTest() {
-        double expectedResult = 10.0;
+        double expectedResult = 10.0d;
         assertEquals(temperatureConverter.fahrenheitToCelsius(50), expectedResult);
     }
 
@@ -34,49 +34,49 @@ public class ConverterTestTask {
 
     @Test
     public void metersToInchesTest() {
-        double expectedResult = 196.85;
+        double expectedResult = 196.85d;
         assertEquals(distanceConverter.metersToInches(5), expectedResult);
     }
 
     @Test
     public void inchesToMetersTest() {
-        double expectedResult = 1.27000254000508;
+        double expectedResult = 1.27000254000508d;
         assertEquals(distanceConverter.inchesToMeters(50), expectedResult);
     }
 
     @Test
     public void milesToKilometresTest() {
-        double expectedResult = 16.09;
+        double expectedResult = 16.09d;
         assertEquals(distanceConverter.milesToKilometres(10), expectedResult);
     }
 
     @Test
     public void kilometresToMilesTest() {
-        double expectedResult = 6.215040397762586;
+        double expectedResult = 6.215040397762586d;
         assertEquals(distanceConverter.kilometresToMiles(10), expectedResult);
     }
 
     @Test
     public void kilogramsToPoundsTest() {
-        double expectedResult = 22.0462;
+        double expectedResult = 22.0462d;
         assertEquals(weightConverter.kilogramsToPounds(10), expectedResult);
     }
 
     @Test
     public void poundsToKilogramsTest() {
-        double expectedResult = 11.339925610087997;
+        double expectedResult = 11.339925610087997d;
         assertEquals(weightConverter.poundsToKilograms(25), expectedResult);
     }
 
     @Test
     public void speedKmToMiTest() {
-        double expectedResult = 6.2139999999999995;
+        double expectedResult = 6.2139999999999995d;
         assertEquals(speedConverter.speedKmToMi(10), expectedResult);
     }
 
     @Test
     public void speedMiToKmTest() {
-        double expectedResult = 16.0926939169617;
+        double expectedResult = 16.0926939169617d;
         assertEquals(speedConverter.speedMiToKm(10), expectedResult);
     }
 
