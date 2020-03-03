@@ -2,6 +2,8 @@ package com.hillel.lecture_2;
 
 import io.qameta.allure.Step;
 
+import static java.lang.Math.*;
+
 /**
  * Created by alpa on 10/16/19
  */
@@ -10,6 +12,7 @@ public class Formulas {
     @Step
     public double calculate9Formula(double x) {
         double result = 0.0;
+       result = pow(exp(1.1), -x) + abs(cos(sqrt(PI*x))) - 3/8;
 //        TODO implement formula 9
         return result;
     }
