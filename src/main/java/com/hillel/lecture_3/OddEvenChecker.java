@@ -9,10 +9,17 @@ public class OddEvenChecker {
 
     @Step
     public String checkNumber(int number) {
-
-//        TODO implements result
         String result = "";
-
+        if (number % 2 == 0){
+            result = "Even Number";
+            System.out.println("Even Number: " + number);
+        }
+        else{
+            System.out.println("Odd Number: " + number );
+         result = "Odd Number";
+        }
+        System.out.println("BYE");
+//        TODO implements result
         return result;
     }
 }
