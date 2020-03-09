@@ -9,10 +9,11 @@ public class LinearEquationChecker {
 
     @Step
     public int linearEquation(int a, int b) {
-
 //        TODO implements result
         int result = 0;
-
-        return result;
+        if (a == 0){
+            return result;
+        }
+        return  -b / a;
     }
 }
