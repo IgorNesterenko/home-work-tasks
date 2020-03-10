@@ -12,7 +12,13 @@ public class DiscountCountChecker {
 
 //        TODO implements result
         double result = 0.0;
-
-        return result;
+        if(price > 1000.0) {
+            double discount = price * 0.15;
+            System.out.println("Your discount is: " + discount);
+            result = price - discount;
+        } else {
+            System.out.println("No discount");
+        }
+            return result;
     }
 }
