@@ -12,28 +12,14 @@ public class MaxMinAverageChecker {
 
 //        TODO implements result
         int result = 0;
-        if (a > b){
-            if(a>c){
-                System.out.println("MAX is a" + a);
+        if (a > b && a > c){
                 result = a;}
-            else if(c>a){
-                    System.out.println("Max is c " + c);
+            else if( c > a && c > b){
                     result = c;
-             } }
-        else if (b>a){
-            if (b>c){
-                System.out.println("Max is b " + b);
+           }else if (b>a && b > c){
                 result = b;
             }
-            else if(c>b){
-                System.out.println("Max is c " + c);
-                result =c;
-            }
-        } else{
-            System.out.println("Numbers are equals!");
             return result;
-        }
-        return result;
     }
 
     @Step
@@ -41,26 +27,14 @@ public class MaxMinAverageChecker {
 
 //        TODO implements result
         int result = 0;
-        if (a > b){
-            if(b<c){
-                System.out.println("Average is b" + b);
-                result = b;}
-            else if(c<b){
-                System.out.println("Average is c " + c);
-                result = c;
-            } }
-        else if (b > a){
-            if (b < c){
-                System.out.println("Average is b " + b);
+        if (a > b && a < c || a > c && a < b){
+                result = a;}
+        else if(b > a && b < c || b > c && b < a){
                 result = b;
-            } else if(a < c){
-                System.out.println("Average is a " + a);
-                result = a;
             }
-        } else{
-            System.out.println("Numbers are equals!");
-            return result;
-        }
+        else if (c > a && c < b || c > b && c < a){
+                result = c;
+            }
         return result;
     }
 
@@ -69,27 +43,12 @@ public class MaxMinAverageChecker {
 
 //        TODO implements result
         int result = 0;
-        if (a < b){
-            if(a<c){
-                System.out.println("Min is a " + a);
+        if (a < b && a < c){
                 result = a;}
-            else if(c<a){
-                System.out.println("Min is c " + c);
-                result = c;
-            } }
-        else if (b<a){
-            if (b<c){
-                System.out.println("Min is b " + b);
-                result = b;
-            }
-            else if(c<b){
-                System.out.println("Min is c " + c);
-                result =c;
-            }
-        } else{
-            System.out.println("Numbers are equals!");
-            return result;
-        }
+        else if(b < a && b < c){
+                result = b;}
+        else if (c < a && c < b){
+                result = c;}
         return result;
 
     }
