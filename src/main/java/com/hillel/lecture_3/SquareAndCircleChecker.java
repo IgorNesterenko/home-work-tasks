@@ -17,7 +17,7 @@ public class SquareAndCircleChecker {
         String result = "";
        double squareSide = sqrt(squareArea);
        double sircleDiametr = 2*sqrt(circleArea/PI);
-       if (squareSide >= sircleDiametr) {
+       if (squareSide > sircleDiametr) {
            System.out.println("The circle is in the square");
            result = "The circle is in the square";
        }else {
@@ -32,7 +32,10 @@ public class SquareAndCircleChecker {
 
 //        TODO implements result
         String result = "";
-        if (squareArea < circleArea) {
+        double squareSide = sqrt(squareArea);
+        double sircleDiametr = 2*sqrt(circleArea/PI);
+        double diag = squareSide * sqrt(2);
+        if (diag <= sircleDiametr) {
             System.out.println("The square is in the circle");
             result = "The square is in the circle";
         }else {
