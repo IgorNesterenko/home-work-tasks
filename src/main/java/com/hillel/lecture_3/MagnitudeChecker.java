@@ -13,9 +13,11 @@ public class MagnitudeChecker {
     public String getGreatestNumberByMagnitude(double a, double b) {
 //        TODO implements result
         String result = "";
-        if (abs(a) > abs(b)){
+        double num1 = abs(a);
+        double num2 = abs(b);
+        if (num1 > num2){
             result = "The number " + a + " has the greatest magnitude!";
-        } else  if (abs(b) > abs(a)){
+        } else  if (num2 > num1){
             result = "The number " + b + " has the greatest magnitude!";
         } else result = "The number " + a + " and " + b + " are equals by magnitude!";
 
