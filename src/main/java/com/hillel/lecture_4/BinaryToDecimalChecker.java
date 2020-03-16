@@ -9,10 +9,15 @@ public class BinaryToDecimalChecker {
 
     @Step
     public int fromDecimalToBinary(int value) {
-
-//        TODO implements result
         int result = 0;
+        int b;
 
+    do{
+    b = value % 2;
+    value = value/2;
+        System.out.print(value);
+    } while (value != 0);
+        System.out.print(result);
         return result;
     }
 
