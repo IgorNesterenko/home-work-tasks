@@ -9,23 +9,29 @@ public class BinaryToDecimalChecker {
 
     @Step
     public int fromDecimalToBinary(int value) {
-        int result = 0;
-        int b;
+        int a = 0;
+        double result = 0;
+        int temp;
+        while (value != 0) {
+            temp = value % 2;
+            result = result + temp *  Math.pow(10, a);
+            a++;
+            value = value/2;
+        }
+        int res = (int)result;
 
-    do{
-    b = value % 2;
-    value = value/2;
-        System.out.print(value);
-    } while (value != 0);
-        System.out.print(result);
-        return result;
+        return res;
     }
 
     @Step
     public int fromBinaryToDecimal(int value) {
-
-//        TODO implements result
         int result = 0;
+        int a = 0;
+        while (value > 0) {
+            if (value % 2 != 0) {result = result + (int) Math.pow(2, a);}
+            a++;
+            value = value/10;
+        }
 
         return result;
     }
