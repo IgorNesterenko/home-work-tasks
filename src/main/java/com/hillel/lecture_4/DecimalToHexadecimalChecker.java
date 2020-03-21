@@ -9,9 +9,27 @@ public class DecimalToHexadecimalChecker {
 
     @Step
     public String fromDecimalToHexadecimal(int value) {
-
-        String a =  Integer.toHexString(value).toUpperCase();
-        return a;
+        String result = "";
+        while (value != 0){
+            int a = value%16;
+            switch (a){
+                case 10: result = "A" + result;
+                break;
+                case 11: result = "B" + result;
+                    break;
+                case 12: result = "c" + result;
+                    break;
+                case 13: result = "D" + result;
+                    break;
+                case 14: result = "E" + result;
+                    break;
+                case 15: result = "F" + result;
+                    break;
+                 default: result = a + result;
+            }
+             value = value / 16;
+        }
+        return result;
     }
 
     @Step
