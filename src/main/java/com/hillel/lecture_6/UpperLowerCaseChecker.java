@@ -10,37 +10,41 @@ public class UpperLowerCaseChecker {
 
     @Step
     public String toUpperCase(String word) {
-
-//        TODO implements result
-        String result = "";
-
+        String result = word.toUpperCase();
         return result;
     }
 
     @Step
     public String toLowerCase(String word) {
-
-//        TODO implements result
-        String result = "";
-
+        String result = word.toLowerCase();
         return result;
     }
 
     @Step
     public String eachSentenceToUpperCase(String sentence) {
-
-//        TODO implements result
         String result = "";
+        char[] arrSentence = sentence.toCharArray();
+        arrSentence[0] = Character.toUpperCase(arrSentence[0]);
+        for (int i = 1; i < arrSentence.length; i++) {
+            if((arrSentence[i] == '.') && arrSentence.length >= (i+2)) {
+                arrSentence[i + 2] = Character.toUpperCase(arrSentence[i + 2]);
+            }
+         result = new String(arrSentence);
+        }
 
-        return result;
-    }
+        return result;}
 
     @Step
     public String eachLetterToUpperCase(String sentence) {
-
-//        TODO implements result
         String result = "";
+        char[] arrSentence = sentence.toCharArray();
+        arrSentence[0] = Character.toUpperCase(arrSentence[0]);
 
-        return result;
-    }
+        for (int i = 1; i < arrSentence.length; i++) {
+           if(arrSentence[i] == ' '){
+               arrSentence[i+1] = Character.toUpperCase(arrSentence[i+1]);
+           }
+           result =  new String(arrSentence);
+        }
+        return result;}
 }

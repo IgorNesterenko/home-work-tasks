@@ -10,9 +10,14 @@ public class SquareWordPatternChecker {
 
     @Step
     public String applySquareWordPattern(String word) {
-
-//        TODO implements result
         String result = "";
+        char arr[] = word.toCharArray();
+        //word.replace()
+
+      //  for (int i = 0; i < word.length() ; i++) {
+
+
+
 
         return result;
     }
