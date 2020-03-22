@@ -18,6 +18,15 @@ package com.hillel.basic.exam;
 public class NumberRotator {
 
     public static long rotate(long n) {
+        String num = "" + n;
+       char[] arr = num.toCharArray();
+
+       for (int i = 0; i < arr.length; i++) {
+           //arr[i]
+
+        }
+
+
         return 0;
     }
 }
