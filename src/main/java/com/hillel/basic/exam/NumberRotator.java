@@ -18,15 +18,17 @@ package com.hillel.basic.exam;
 public class NumberRotator {
 
     public static long rotate(long n) {
-        String num = "" + n;
-       char[] arr = num.toCharArray();
-
-       for (int i = 0; i < arr.length; i++) {
-           //arr[i]
-
+        long max = n;
+        String val  = "" + n;
+        String temp = "";
+        String temp1 = "";
+        for (int i = 0 ; i < 2; i++){
+            temp = val.substring(i, i+1);
+            temp1 = val.substring(0, i);
+            val=temp1+val.substring(i+1)+temp;
+            max = Math.max(max, Long.parseLong(val));
         }
-
-
-        return 0;
+        System.out.println(max);
+        return max;
     }
 }
