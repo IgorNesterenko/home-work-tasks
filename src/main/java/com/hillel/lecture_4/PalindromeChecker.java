@@ -9,11 +9,12 @@ public class PalindromeChecker {
 
     @Step
     public boolean isPalindrome(String value) {
-
-//        TODO implements result
-        boolean result = false;
-
-        return result;
+        char arr[] = value.toCharArray();
+        String reverse = "";
+        for (int i = arr.length - 1; i >= 0; i--) {
+            reverse += value.charAt(i);
+        }
+        return  reverse.equalsIgnoreCase(value);
     }
 
 }
