@@ -4,37 +4,60 @@ package com.hillel.FractionNumbers;
  * Created by neste on 26.03.2020.
  */
 public class FractionNumbers {
-   private int number1;
-   private int number2;
-   public int result;
+   private int numerator;
+   private int denominator;
 
-   public int getNumber1(){
-       return number1;
-   }
-   public void setNumber1(int number1){
-       this.number1 = number1;
-   }
-   public int getNumber2(){
-       return number2;
-   }
-    public void setNumber2(int number2){
-        this.number2 = number2;
+    public FractionNumbers(int numerator, int denominator) {
+        if (denominator == 0){
+            System.out.println("Denominator can't be 0");
+        }
+        this.numerator = numerator;
+        this.denominator = denominator;
     }
 
-   public void plusOperation(){
-      this.result =  getNumber1() + getNumber2();
+    public int getNumerator(){
+       return numerator;
    }
 
-   public void multiplyOperation(){
-       this.result = getNumber1() * getNumber2();
+   public int getDenominator(){
+       return denominator;
    }
 
-   public void minusOperation(){
-       this.result = getNumber1() - getNumber2();
+   public static FractionNumbers multiply(FractionNumbers num1, FractionNumbers num2){
+       return new FractionNumbers(
+    num1.getNumerator() * num2.getNumerator(),
+    num1.getDenominator() * num2.getDenominator()
+       );
    }
 
-    public void divideOperation(){
-        this.result = getNumber1() / getNumber2();
+   public static FractionNumbers plus(FractionNumbers num1, FractionNumbers num2){
+       return new FractionNumbers(
+    num1.getNumerator() * num2.getDenominator() + num1.getDenominator() * num2.getNumerator(),
+    num1.getDenominator() * num2.getDenominator()
+       );
+   }
+
+   public static FractionNumbers divide(FractionNumbers num1, FractionNumbers num2){
+       return new FractionNumbers(
+   num1.getNumerator() * num2.getDenominator(),
+   num1.getDenominator() * num2.getNumerator()
+       );
+   }
+
+   public static FractionNumbers minus (FractionNumbers num1, FractionNumbers num2){
+       return new FractionNumbers(
+               num1.getNumerator() * num2.getDenominator() - num1.getDenominator() * num2.getNumerator(),
+               num1.getDenominator() * num2.getDenominator()
+       );
+   }
+
+    @Override
+    public String toString() {
+        return "FractionNumbers{" +
+                 getNumerator() + "/" +
+                 getDenominator() +
+                '}';
     }
 
 }
+

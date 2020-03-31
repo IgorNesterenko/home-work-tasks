@@ -5,14 +5,29 @@ package com.hillel.FractionNumbers;
  */
 public class App {
     public static void main(String[] args) {
-        FractionNumbers fractionNumbers = new FractionNumbers();
 
-        fractionNumbers.setNumber1(10);
-        fractionNumbers.setNumber2(15);
-        fractionNumbers.multiplyOperation();
-        System.out.println(fractionNumbers.result);
+        FractionNumbers fn1 = new FractionNumbers(4,5);
+        FractionNumbers fn2 = new FractionNumbers(5,8);
 
-        fractionNumbers.plusOperation();
-        System.out.println(fractionNumbers.result);
+        FractionNumbers plus = FractionNumbers.plus(fn1, fn2);
+        System.out.println(plus);
+
+        FractionNumbers multiply = FractionNumbers.multiply(fn1, fn2);
+        System.out.println(multiply);
+
+        FractionNumbers minus = FractionNumbers.minus(fn1, fn2);
+        System.out.println(minus);
+
+        FractionNumbers divide = FractionNumbers.divide(fn1, fn2);
+        System.out.println(divide);
+
+
+
+
+
+
+
+
+
     }
 }
