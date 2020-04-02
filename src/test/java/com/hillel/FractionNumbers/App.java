@@ -9,16 +9,16 @@ public class App {
         FractionNumbers fn1 = new FractionNumbers(4,5);
         FractionNumbers fn2 = new FractionNumbers(5,8);
 
-        FractionNumbers plus = FractionNumbers.plus(fn1, fn2);
+        FractionNumbers plus = fn1.plus(fn2);
         System.out.println(plus);
 
-        FractionNumbers multiply = FractionNumbers.multiply(fn1, fn2);
+        FractionNumbers multiply = fn1.multiply(fn2);
         System.out.println(multiply);
 
-        FractionNumbers minus = FractionNumbers.minus(fn1, fn2);
+        FractionNumbers minus = fn1.minus(fn2);
         System.out.println(minus);
 
-        FractionNumbers divide = FractionNumbers.divide(fn1, fn2);
+        FractionNumbers divide = fn1.divide(fn2);
         System.out.println(divide);
 
 

@@ -23,31 +23,31 @@ public class FractionNumbers {
        return denominator;
    }
 
-   public static FractionNumbers multiply(FractionNumbers num1, FractionNumbers num2){
+   public  FractionNumbers multiply(FractionNumbers num1){
        return new FractionNumbers(
-    num1.getNumerator() * num2.getNumerator(),
-    num1.getDenominator() * num2.getDenominator()
+    num1.getNumerator() * this.getNumerator(),
+    num1.getDenominator() * this.getDenominator()
        );
    }
 
-   public static FractionNumbers plus(FractionNumbers num1, FractionNumbers num2){
+   public  FractionNumbers plus(FractionNumbers num1){
        return new FractionNumbers(
-    num1.getNumerator() * num2.getDenominator() + num1.getDenominator() * num2.getNumerator(),
-    num1.getDenominator() * num2.getDenominator()
+    num1.getNumerator() * this.getDenominator() + num1.getDenominator() * this.getNumerator(),
+    num1.getDenominator() * this.getDenominator()
        );
    }
 
-   public static FractionNumbers divide(FractionNumbers num1, FractionNumbers num2){
+   public FractionNumbers divide(FractionNumbers num1){
        return new FractionNumbers(
-   num1.getNumerator() * num2.getDenominator(),
-   num1.getDenominator() * num2.getNumerator()
+   num1.getNumerator() * this.getDenominator(),
+   num1.getDenominator() * this.getNumerator()
        );
    }
 
-   public static FractionNumbers minus (FractionNumbers num1, FractionNumbers num2){
+   public  FractionNumbers minus (FractionNumbers num1){
        return new FractionNumbers(
-               num1.getNumerator() * num2.getDenominator() - num1.getDenominator() * num2.getNumerator(),
-               num1.getDenominator() * num2.getDenominator()
+               num1.getNumerator() * this.getDenominator() - num1.getDenominator() * this.getNumerator(),
+               num1.getDenominator() * this.getDenominator()
        );
    }
 
