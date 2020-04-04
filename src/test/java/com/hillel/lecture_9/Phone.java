@@ -58,6 +58,8 @@ public class Phone {
                 return "+38063";
             case "kyivstar":
                 return "+38067";
+            case "ukrtelekom":
+                return "+38056";
             default:
                 return "Unknown operator";
         }

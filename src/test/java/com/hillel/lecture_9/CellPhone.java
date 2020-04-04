@@ -10,14 +10,6 @@ public class CellPhone extends Phone {
         super(type, provider, manufacturer);
     }
 
-    public String getOs() {
-        return os;
-    }
-
-    public void setOs(String os) {
-        this.os = os;
-    }
-
     public String call(){
         return "Somebody call!";
     }
