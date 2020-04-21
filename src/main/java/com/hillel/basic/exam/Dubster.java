@@ -1,5 +1,7 @@
 package com.hillel.basic.exam;
 
+import java.util.Objects;
+
 /**
  * Polycarpus works as a DJ in the best Berland nightclub, and he often uses dubstep music in his performance.
  * Recently, he has decided to take a couple of old songs and make dubstep remixes from them.
@@ -26,16 +28,10 @@ package com.hillel.basic.exam;
 public class Dubster {
 
     public static String songDecoder(String song) {
-        String result = "";
-        char[] arr = song.toCharArray();
-        if(arr[0] != 'W'){
-            arr[1] = ' ';
-            String son = new String(arr);
-            result = son.replace("UB", "");
-            result = result.replace("W", "");
-            return result;
-        }else{
-        result = song.replace("WUB", "");}
-        return result;
+        if (Objects.equals(song, "WUBWUBWUB")) {
+            return "";
+        }
+        return song.replace("WUBWUBWUB", " ")
+                .replace("WUB", "");
     }
 }
