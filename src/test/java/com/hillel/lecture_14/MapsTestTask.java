@@ -1,5 +1,6 @@
 package com.hillel.lecture_14;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
@@ -23,7 +24,7 @@ public class MapsTestTask {
     }
 
     @Test
-    public void convertUserToJsonString() {
+    public void convertUserToJsonString() throws JsonProcessingException {
         User user = buildSteveRogers();
 
         assertEquals(jsonConverter.convertToJsonString(user), jsonUser);
