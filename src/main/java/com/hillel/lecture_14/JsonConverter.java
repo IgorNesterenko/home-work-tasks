@@ -1,8 +1,5 @@
 package com.hillel.lecture_14;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import netscape.javascript.JSObject;
 
 import java.util.HashMap;
 import java.util.List;
